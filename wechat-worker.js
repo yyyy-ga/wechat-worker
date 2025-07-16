@@ -30,7 +30,7 @@ async function handleWeChatVerification(request) {
   const echostr = url.searchParams.get('echostr')
   
   // 从环境变量获取微信token
-  const token = WECHAT_TOKEN || 'wx8c405474794e14b9'
+  const token = WX_TOKEN
   
   if (!signature || !timestamp || !nonce || !echostr) {
     return new Response('Invalid parameters', { status: 400 })
@@ -66,7 +66,7 @@ async function handleWeChatMessage(request) {
     }
     
     // 构造回复消息
-    const replyXml = generateReplyXml(fromUserName, toUserName, '已收到')
+    const replyXml = generateReplyXml(fromUserName, toUserName, '已收到v1.1')
     
     return new Response(replyXml, {
       headers: {
