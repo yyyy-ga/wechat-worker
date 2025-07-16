@@ -61,7 +61,7 @@ async function handleWeChatMessage(request, env) {
       throw new Error('Invalid message format');
     }
 
-    const replyXml = generateReplyXml(fromUserName, toUserName, '已收到v1.2');
+    const replyXml = generateReplyXml(fromUserName, toUserName, '已收到v1.3');
 
     return new Response(replyXml, {
       headers: { 'Content-Type': 'application/xml' },
