@@ -1,0 +1,7 @@
+name = "wechat-auto-reply"
+main = "wechat-worker.js"
+compatibility_date = "2024-01-01"
+
+[vars]
+# 微信服务器配置中的Token，需要与微信公众号后台设置一致
+WX_TOKEN = "wx8c405474794e14b9"
